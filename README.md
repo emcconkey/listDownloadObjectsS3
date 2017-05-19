@@ -5591,18 +5591,6 @@ style='font-size:9.0pt;color:#E8BF6A'>&lt;/tbody&gt;<br>
 <p class=MsoListParagraph style='margin-left:18.0pt;mso-add-space:auto'><span
 style='font-size:12.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
-line-height:115%'>Si se desea descargar este código se tiene disponible
-en:<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
-
-<p class=MsoNormal align=center style='text-align:center'><a
-href="https://github.com/nesag/listDownloadObjectsS3"><span style='font-size:
-12.0pt;line-height:115%'>https://github.com/nesag/listDownloadObjectsS3</span></a><span
-style='font-size:12.0pt;line-height:115%'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
-line-height:115%'><o:p>&nbsp;</o:p></span></p>
-
 <p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
 
 </div>
