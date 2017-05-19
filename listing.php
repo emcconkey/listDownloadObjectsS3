@@ -1,11 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: naguilar
- * Date: 18/05/2017
- * Time: 10:17 PM
- */
+
+#Se agrega el archivo start que nos permite iniciar los objetos en AWS SDK
 require 'app/start.php';
+
+#Se instancia los objetos del bucket
 $objects = $s3->getIterator('ListObjects', [
         'Bucket' => $config['s3']['bucket']
     ]);
@@ -26,17 +24,18 @@ $objects = $s3->getIterator('ListObjects', [
                 </tr>
             </thead>
             <tbody>
+            <!--Se ITERA sobre los objetos listados y se obtiene el nombre y la URL del objeto con disponibilidad de 1 minuto para descargar una vez solicitado esta misma -->
             <?php foreach ($objects as $object):?>
                 <tr>
                     <td><?php echo $object['Key'] ?></td>
-                    <td><a href="<?php echo $s3->getObjectUrl($config['s3']['bucket'], $object['Key']); ?>" download="<?php echo $object['Key'] ?>" target="_blank">Download file</a></td>
+                    <td>
+                        <a href="<?php echo $s3->getObjectUrl($config['s3']['bucket'], $object['Key'], '+1 minutes'); ?>" download="<?php echo $object['Key'] ?>" target="_blank">Download file</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
-
         </table>
     </body>
-
 </html>
 
 
