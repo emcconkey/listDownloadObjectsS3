@@ -5520,4 +5520,93 @@ style='font-size:9.0pt;color:#A9B7C6'>Download</span><span style='font-size:
 <span style='mso-spacerun:yes'>            </span>&lt;/thead&gt;<br>
 <span style='mso-spacerun:yes'>            </span>&lt;tbody&gt;<br>
 <span style='mso-spacerun:yes'>            </span></span><span
-style='font-size:9.0pt;color:gray'>&lt;!--Se ITERA sobre los objetos listados y se o
+style='font-size:9.0pt;color:gray'>&lt;!--Se ITERA sobre los objetos listados y se obtiene el nombre y la URL del objeto con disponibilidad de 1 minuto para descargar una vez solicitado esta misma --&gt;<br>
+<span style='mso-spacerun:yes'>            </span></span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>&lt;?php foreach </span></b><span
+style='font-size:9.0pt;color:#A9B7C6;background:#232525'>(</span><span
+style='font-size:9.0pt;color:#9876AA;background:#232525'>$objects </span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>as </span></b><span
+style='font-size:9.0pt;color:#9876AA;background:#232525'>$object</span><span
+style='font-size:9.0pt;color:#A9B7C6;background:#232525'>):</span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>?&gt;</span></b><b><span
+style='font-size:9.0pt;color:#CC7832'><br>
+<span style='mso-spacerun:yes'>                </span></span></b><span
+style='font-size:9.0pt;color:#E8BF6A'>&lt;tr&gt;<br>
+<span style='mso-spacerun:yes'>                    </span>&lt;td&gt;</span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>&lt;?php echo </span></b><span
+style='font-size:9.0pt;color:#9876AA;background:#232525'>$object</span><span
+style='font-size:9.0pt;color:#A9B7C6;background:#232525'>[</span><span
+style='font-size:9.0pt;color:#6A8759;background:#232525'>'Key'</span><span
+style='font-size:9.0pt;color:#A9B7C6;background:#232525'>] </span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>?&gt;</span></b><span
+style='font-size:9.0pt;color:#E8BF6A'>&lt;/td&gt;<br>
+<span style='mso-spacerun:yes'>                    </span>&lt;td&gt;<br>
+<span style='mso-spacerun:yes'>                        </span>&lt;a </span><span
+style='font-size:9.0pt;color:#BABABA'>href=</span><span style='font-size:9.0pt;
+color:#A5C261'>&quot;</span><b><span style='font-size:9.0pt;color:#CC7832;
+background:#232525'>&lt;?php echo </span></b><span style='font-size:9.0pt;
+color:#9876AA;background:#232525'>$s3</span><span style='font-size:9.0pt;
+color:#A9B7C6;background:#232525'>-&gt;</span><span style='font-size:9.0pt;
+color:#FFC66D;background:#232525'>getObjectUrl</span><span style='font-size:
+9.0pt;color:#A9B7C6;background:#232525'>(</span><span style='font-size:9.0pt;
+color:#9876AA;background:#232525'>$config</span><span style='font-size:9.0pt;
+color:#A9B7C6;background:#232525'>[</span><span style='font-size:9.0pt;
+color:#6A8759;background:#232525'>'s3'</span><span style='font-size:9.0pt;
+color:#A9B7C6;background:#232525'>][</span><span style='font-size:9.0pt;
+color:#6A8759;background:#232525'>'bucket'</span><span style='font-size:9.0pt;
+color:#A9B7C6;background:#232525'>]</span><span style='font-size:9.0pt;
+color:#CC7832;background:#232525'>, </span><span style='font-size:9.0pt;
+color:#9876AA;background:#232525'>$object</span><span style='font-size:9.0pt;
+color:#A9B7C6;background:#232525'>[</span><span style='font-size:9.0pt;
+color:#6A8759;background:#232525'>'Key'</span><span style='font-size:9.0pt;
+color:#A9B7C6;background:#232525'>]</span><span style='font-size:9.0pt;
+color:#CC7832;background:#232525'>, </span><span style='font-size:9.0pt;
+color:#6A8759;background:#232525'>'+1 minutes'</span><span style='font-size:
+9.0pt;color:#A9B7C6;background:#232525'>)</span><span style='font-size:9.0pt;
+color:#CC7832;background:#232525'>; <b>?&gt;</b></span><span style='font-size:
+9.0pt;color:#A5C261'>&quot; </span><span style='font-size:9.0pt;color:#BABABA'>download=</span><span
+style='font-size:9.0pt;color:#A5C261'>&quot;</span><b><span style='font-size:
+9.0pt;color:#CC7832;background:#232525'>&lt;?php echo </span></b><span
+style='font-size:9.0pt;color:#9876AA;background:#232525'>$object</span><span
+style='font-size:9.0pt;color:#A9B7C6;background:#232525'>[</span><span
+style='font-size:9.0pt;color:#6A8759;background:#232525'>'Key'</span><span
+style='font-size:9.0pt;color:#A9B7C6;background:#232525'>] </span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>?&gt;</span></b><span
+style='font-size:9.0pt;color:#A5C261'>&quot; </span><span style='font-size:
+9.0pt;color:#BABABA'>target=</span><span style='font-size:9.0pt;color:#A5C261'>&quot;_blank&quot;</span><span
+style='font-size:9.0pt;color:#E8BF6A'>&gt;</span><span style='font-size:9.0pt;
+color:#A9B7C6'>Download file</span><span style='font-size:9.0pt;color:#E8BF6A'>&lt;/a&gt;<br>
+<span style='mso-spacerun:yes'>                    </span>&lt;/td&gt;<br>
+<span style='mso-spacerun:yes'>                </span>&lt;/tr&gt;<br>
+<span style='mso-spacerun:yes'>            </span></span><b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>&lt;?php endforeach</span></b><span
+style='font-size:9.0pt;color:#CC7832;background:#232525'>; <b>?&gt;</b></span><b><span
+style='font-size:9.0pt;color:#CC7832'><br>
+<span style='mso-spacerun:yes'>            </span></span></b><span
+style='font-size:9.0pt;color:#E8BF6A'>&lt;/tbody&gt;<br>
+<span style='mso-spacerun:yes'>        </span>&lt;/table&gt;<br>
+<span style='mso-spacerun:yes'>    </span>&lt;/body&gt;<br>
+&lt;/html&gt;</span><span style='font-size:9.0pt;color:#A9B7C6'><o:p></o:p></span></pre>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;mso-add-space:auto'><span
+style='font-size:12.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:115%'>Si se desea descargar este código se tiene disponible
+en:<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a
+href="https://github.com/nesag/listDownloadObjectsS3"><span style='font-size:
+12.0pt;line-height:115%'>https://github.com/nesag/listDownloadObjectsS3</span></a><span
+style='font-size:12.0pt;line-height:115%'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
