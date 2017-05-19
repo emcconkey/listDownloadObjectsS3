@@ -4,44 +4,14 @@ Listar archivos de bucket s3 Aws y crear link de descarga
 
 19/05/2017
 
-	
-	
-	
-	
-	
-Descarga archivos de Bucket S3 con PHP
-AWS SDK for PHP 
+Descarga archivos de con AWS SDK for PHP 
 
-				
-		
-		
-		
-		
-		
-
-		Nestor Ismael Aguilar Estrada
-
- 
-Descarga archivos de Bucket S3 con PHP
-AWS SDK for PHP 
 A continuación de describe el proceso para descarga de archivos alojados en un bocket S3 AWS con la SDK de AWS y PHP. 
  
-Arquitectura general
-Requisitos para poder hacer uso del Bucket:
-a)	Tener los accesos a la api:	
-a.	Key
-b.	Secret Key
-c.	Nombre Bucket
-b)	Requisitos de SDK AWS PHP
-a.	Tener habilitadas las extenciones:
-i.	OpenSSL PHP
-ii.	cURL
-iii.	OPCache
-iv.	Composer (opcional, pero muy recomendado)
-
 Instalación de AWS SDK for PHP:
 
-La instalación de la SDK es posible realizarla por:
+La instalación de la SDK es posible realizarla por:<br>
+
 a)	Composer
 b)	Phar
 c)	Zip
