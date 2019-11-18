@@ -1,19 +1,19 @@
 <?php
 
-#Se agrega el archivo start que nos permite iniciar los objetos en AWS SDK
+// This file contains the references to the AWS SDK as well as our configuration parameters
 require 'app/start.php';
 
-#Se instancia los objetos del bucket
 $objects = $s3->getIterator('ListObjects', [
         'Bucket' => $config['s3']['bucket']
     ]);
-//var_dump($objects);
+
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Listando</title>
+        <title>File Listing</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <table>
@@ -24,12 +24,11 @@ $objects = $s3->getIterator('ListObjects', [
                 </tr>
             </thead>
             <tbody>
-            <!--Se ITERA sobre los objetos listados y se obtiene el nombre y la URL del objeto con disponibilidad de 1 minuto para descargar una vez solicitado esta misma -->
             <?php foreach ($objects as $object):?>
                 <tr>
                     <td><?php echo $object['Key'] ?></td>
                     <td>
-                        <a href="<?php echo $s3->getObjectUrl($config['s3']['bucket'], $object['Key'], '+1 minutes'); ?>" download="<?php echo $object['Key'] ?>" target="_blank">Download file</a>
+                        <a href="<?php echo $s3->getObjectUrl($config['s3']['bucket'], $object['Key'], $config['s3']['expiration']); ?>" download="<?php echo $object['Key'] ?>" target="_blank">Download file</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
