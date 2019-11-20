@@ -1,4 +1,4 @@
-#List and download S3 bucket contents with PHP
+# List and download S3 bucket contents with PHP
 
 This small program will let you list and download the contents of
 your S3 bucket without having to make the bucket public. If you have specific user
